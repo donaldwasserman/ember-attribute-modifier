@@ -1,7 +1,36 @@
 ember-attribute-modifier
 ==============================================================================
 
-[Short description of the addon.]
+This `attribute` modifier is made for declarative attribute bindings for DOM nodes.
+
+This addon is heavily "inspired" by [ember-class-modifier.](https://github.com/lifeart/ember-class-modifier)
+
+### Usage
+
+When you want to conditionally apply a list of variable attributes onto an element,
+it's a pain (especially for `data-test` attributes).
+
+```js
+  // component.js
+  myAttributes = ['data-test-thing', 'data-test-other-thing']
+  // also works like
+  myAttributes = 'data-test-thing, data-test-other-thing'
+```
+
+```hbs
+  <button {{attribute this.myAttributes}}></button>
+```
+
+Conditionally remove attributes based on booleans
+
+```js
+  // component.js
+  isDisabled = false
+```
+
+```hbs
+  <div {{attribute data-test-disabled=this.isDisabled}}></div>
+```
 
 
 Compatibility
