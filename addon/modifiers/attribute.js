@@ -1,6 +1,5 @@
 import { Modifier } from 'ember-oo-modifiers';
-import { A } from '@ember/array';
-import { set, computed } from '@ember/object';
+import { set } from '@ember/object';
 import { typeOf } from '@ember/utils';
 import { assert } from '@ember/debug';
 
@@ -39,7 +38,7 @@ export default class AttributeModifier extends Modifier {
     let newKeys = Object.keys(hash);
     if (this.attributeHash) {
       let currentKeys = Object.keys(this.attributeHash);
-      let cleanup = currentKeys.filter(old => !attributeList.includes(old));
+      let cleanup = currentKeys.filter(old => !Object.keys(this.attributeHash).includes(old));
       set(this, 'attributeHash', hash);
       this.removeAttributes(cleanup);
     }
