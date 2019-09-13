@@ -20,6 +20,20 @@
     "test": "ember test",
     "test:all": "ember try:each"
   },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "ember-cli-babel": "^7.7.3"
   },
