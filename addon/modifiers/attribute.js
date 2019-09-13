@@ -1,5 +1,4 @@
 import { Modifier } from 'ember-oo-modifiers';
-import { A } from '@ember/array';
 import { set, computed } from '@ember/object';
 import { typeOf } from '@ember/utils';
 import { assert } from '@ember/debug';
